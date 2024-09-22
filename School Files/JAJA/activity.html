@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JOURNAL
+    </title>
+</head>
+
+<body style="background-color: lightblue; ">
+
+    <h1 style="font-style: italic; text-align: center; background-color:white;">My Journal</h1>
+    <h2 style="text-align: center;">Title of your Journal</h2>
+    <br>
+    <br>
+    <p>
+        <center>Click the button below to check the content of my journal</center>
+    </p>
+    <center><button id="Btn" style="background-color: blanchedalmond; font-style: oblique;">Click Me</button></center>
+    <center><p id="1"></p></center>
+
+    <script>
+        const element = document.getElementById("Btn");
+
+        element.addEventListener("click", function() {
+            document.getElementById("1").innerHTML = "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela";
+        });
+    </script>
+
+</body>
+
+</html>

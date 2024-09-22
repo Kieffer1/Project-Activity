@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNAL LINKS</title>
+
+    <style>
+        .top{
+            border: 5px solid;
+            text-align: center;
+            background-color: aqua;
+            padding-top: 20px;
+            height: 200px;
+            width: 200px;
+            margin-bottom: 600px;
+        }
+        .top a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .top a:hover{
+            color: green;
+            cursor: hand;
+        }
+        .middle{
+            border: 5px solid;
+            text-align: center;
+            background-color: pink;
+            padding-top: 20px;
+            height: 200px;
+            width: 200px;
+            margin-bottom: 600px;
+        }
+        .middle a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .middle a:hover{
+            color: pink;
+            cursor: hand;
+        }
+        .bottom{
+            border: 5px solid;
+            text-align: center;
+            background-color: blue;
+            padding-top: 20px;
+            height: 200px;
+            width: 200px;
+            margin-bottom: 600px;
+        }
+        .bottom a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .bottom a:hover{
+            color: blue;
+            cursor: hand;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="top" id="mytop">
+        <p><a href="#mytop"> Click to Go Top </a></p>
+        <p><a href="#mymiddle"> Click to Go Middle </a></p>
+        <p><a href="#mybottom"> Click to Go Bottom </a></p>
+    </div>
+
+    <div class="middle" id="mymiddle">
+        <p><a href="#mytop"> Click to Go Top </a></p>
+        <p><a href="#mymiddle"> Click to Go Middle </a></p>
+        <p><a href="#mybottom"> Click to Go Bottom </a></p>
+    </div>
+
+    <div class="bottom" id="mybottom">
+        <p><a href="#mytop"> Click to Go Top </a></p>
+        <p><a href="#mymiddle"> Click to Go Middle </a></p>
+        <p><a href="#mybottom"> Click to Go Bottom </a></p>
+    </div>
+
+</body>
+</html>

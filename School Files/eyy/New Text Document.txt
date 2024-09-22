@@ -1,0 +1,55 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Nonoy{
+    public static void main(String[] args){
+        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> putyong = new ArrayList<String>();
+    
+        boolean handsome = true;
+        Scanner scan = new Scanner(System.in);
+        String selection;
+        String name;
+        
+        System.out.println("1 to add on list");
+        System.out.println("2 to remove on list");
+        System.out.println("3 to show list");
+        System.out.println("4 to exit program");
+        
+        while(handsome){
+            System.out.print("Enter a number: ");
+            String encode = scan.nextLine();
+            
+            if (encode.equals("1")){
+                System.out.print("ilagay ang pangalan: ");
+                String pangalan = scan.nextLine();
+                list.add(pangalan);
+                System.out.println("Si " + pangalan + "ay naidagdag na");
+            }
+            
+            else if (encode.equals("2")){
+                    System.out.print("sino ang tatanggalin? ");
+                    String pangalan = scan.nextLine();
+                    putyong.add(pangalan);
+                    list.remove(pangalan);
+                    System.out.println("Si " + pangalan + " ay na tanggal na");
+            }
+            
+            else if (encode.equals("3")){
+                System.out.println("ipakita ang lista: ");
+                for (String ArrayAraguy: putyong){
+                    System.out.println(ArrayAraguy);
+                }
+            }
+            else if (encode.equals("4")){
+                System.out.println("Goodbye");
+                break;
+            }
+            else {
+                System.out.println("error");
+            
+            }
+        }
+    }
+}
+    
