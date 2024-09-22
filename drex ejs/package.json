@@ -1,0 +1,12 @@
+{
+  "name": "drex-ejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+  
+}
