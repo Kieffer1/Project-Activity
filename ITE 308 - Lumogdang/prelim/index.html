@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="banner" id="home">
+        
+        <div class="navbar">
+            
+            <div class="logo">WG</div>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            
+            <h1 class="glow">The Worst Generation</h1>
+            <p>For more topic visit our pages</p>
+            <div class="buttons">
+                <button type="button"><span></span> READ MORE </button>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="blog-section" id="news">
+
+        <div class="section-content">
+            
+            <div class="title">
+                <h1> One Piece News</h1>
+                <p> Events handled by Morgans</p>
+                <br>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    
+                    <div class="image-section">
+                        <img src="News Page/images/luffy.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Worst Generation Monkey D. Luffy punches a Celestial Dragon</h4>
+                        <p><b>Luffy and the Strawhats came into a family of Celestial Dragons at the Sabaody auction house while trying to save Caime.<br> <br>His ambition to buy Caime and put her in an aquarium with piranhas made punching the concerned Celestial Dragon reasonable. But because Hanchi didn't want to start a fight, he restrained Luffy. 
+                            However, Hanchi was obliged to hit Luffy because he had shot him multiple times simply because he could. The Celestial Dragon called Hanchi less than human and laughed at the injured Fishman. Luffy is a terrific friend who hates being severe, as everyone knows.</b></p>
+                    </div>
+
+                    <div class="blog-view">
+                        <a href="#news" class="button">Read More</a>
+                    </div>
+
+                    <div class="posted-date">
+                        <p>Date Posted: April 12, 2009</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="image-section">
+                        <img src="News Page/images/luffyemperor.webp">
+                    </div>
+                    <div class="article">
+                        <h4>Monkey D. Luffy was Declared as Emperor of the Sea</h4>
+                        <p><b>After Wano, the strengths of the strongest have reached new heights. <br> <br>All three of them have gotten new power-ups. Luffy has become an emperor after defeating Kaido. Zoro and Sanji also defeated the commanders of Kaido, Queen, and King. The addition of Jimbei also affects the status of the monster trio. With Luffy being an emperor, is he still a part of the monster trio? </b></p>
+                    </div>
+
+                    <div class="blog-view">
+                        <a href="#news" class="button">Read More</a>
+                    </div>
+
+                    <div class="posted-date">
+                        <p>Date Posted: December 28, 2023</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="image-section">
+                        <img src="News Page/images/luffy2.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Worst Generation Monkey D. Luffy comes back at the Marineford</h4>
+                        <p><b>He rung the Ox Lloyd’s Bell<br> <br>(a Marine tradition, apparently. It’s rung at New Year: eight times to salute the passing year and another eight to welcome the new). Okay, I thought. I have no idea what this means. Let’s see where this goes.
+
+                            It became a bit clearer when Luffy walked through the dumbstruck crowd, laid flowers into the chasm and removed his hat in a gesture of respect. Okay, I thought, this is funeral stuff. He’s returning to Marineford to pay his respects to Ace. This was to give Luffy closure so he could continue to live his life without being crippled by guilt and depression.</b></p>
+                    </div>
+
+                    <div class="blog-view">
+                        <a href="#news" class="button">Read More</a>
+                    </div>
+
+                    <div class="posted-date">
+                        <p>Date Posted: August 21, 2011</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- This code is for about page -->
+    <div class="about-section" id="about">
+        <div class="heading">
+            <h1>About US</h1>
+            <p>This page Topics about the Worst Generation</p>
+        </div>
+        <div class="container">
+            <section class="about">
+                <div class="about-image">
+                    <img src="News Page/images/WorstGeneration.webp">
+                </div>
+                <div class="about-content">
+                    <h2>WORST GENERATION</h2>
+                    <p>The Worst Generation is a term referring to twelve infamous pirates who emerged immediately before the beginning of the Summit War of Marineford. They consist of the eleven super rookies present at the Sabaody Archipelago just before said war, and the then-Warlord Blackbeard, who gained the title following his victory over Ace during the Duel on Banaro Island.[2] They are notorious for the bold actions they committed against the World Government and have bounties of over 100,000,000 Beli</p>
+                    <a href="#about" class="read-more">Read More</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div class="gallery" id="gallery">
+        <input type="radio" name="photos" id="check1" checked>
+        <input type="radio" name="photos" id="check2">
+        <input type="radio" name="photos" id="check3">
+        <input type="radio" name="photos" id="check4">
+        
+        <div class="gallery-container">
+            <h1>Worst Generation Gallery</h1>
+            
+            <div class="top-content">
+                <h3>Worst Generation Characters</h3>
+                <label for="check1">All</label>
+                <label for="check2">MaleCharacters</label>
+                <label for="check3">FemaleCharacters</label>
+            </div>
+            
+            <div class="photo-gallery">
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/teach.jpg">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/luffy.png">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/Kidd.jpg">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/apoo.webp">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/law.jpg">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/zoro.png">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/bege.jpg">
+                </div>
+                <div class="pic FemaleCharacters">
+                    <img src="Gallery Page/images/bonney.jpg">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/hawkins.png">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/killer.webp">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/xdrake.webp">
+                </div>
+                <div class="pic MaleCharacters">
+                    <img src="Gallery Page/images/urouge.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

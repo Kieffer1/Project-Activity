@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"  type="image/x-icon" href="imahe/wanpisflag.png">
+    <title>Gallery Page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .row{
+            display: flex;
+        }
+
+        body{
+            margin: 0;
+            background: no-repeat center/100% url(GIFs/neon.gif) ;
+        }
+
+
+        .col1{
+            width:18%;
+            padding: 10px 10px 20px 10px;
+            -webkit-text-stroke: 2px solid;
+            -webkit-text-stroke-color: red;
+            margin-left: 80px;
+            margin-top: 16px;
+            border: 2px solid black;
+            background-color: rgba(248, 248, 255, 0);
+            box-shadow: 10px 10px 50px 5px rgb(148, 74, 244);
+            float: left;
+            -ms-transform: rotate(7deg);
+            -webkit-transform: rotate(7deg);
+            transform: rotate(7deg)
+            
+        }
+        .col1 p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .col1 span{
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .col1:hover{
+            transform: rotate(0deg);
+            box-shadow: none;
+            background-color: rgba(248, 248, 255, 0);
+            border: none;
+            color: yellow;
+            
+        }
+
+        .col2{
+            width:18%;
+            padding: 10px 10px 20px 10px;
+            margin-left: 80px;
+            margin-top: 16px;
+            border: 2px solid black;
+            background-color: rgba(248, 248, 255, 0);
+            box-shadow: 10px 10px 50px 5px rgb(148, 74, 244);
+            float: left;
+            -ms-transform: rotate(-8deg);
+            -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg)
+        }
+        .col2 p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .col2 span{
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .col2:hover{
+            transform: rotate(0deg);
+            box-shadow: none;
+            background-color: rgba(248, 248, 255, 0);
+            border: none;
+            color: yellow;
+        }
+        .row:after{
+        content:"";
+        display:table;
+        clear:both;
+
+        }
+
+        @media screen and (max-width:600px){
+            .col1{
+                width:100%;
+            }
+            .col2{
+                width:100%;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="col2" id="boa">
+            <img src="imahe/hancock.jpg" width="100%">
+            <span>Boa Hancock</span>
+            <p class="desc1">One of the Seven Warlords of the Sea. Empress of "the Island of Women. She always looks down on and acts superior to others. </p>
+        </div>
+
+        <div class="col2" id="nami">
+            <img src="imahe/nami.jpg" width="100%">
+            <span>Nami</span>
+            <p class="desc1">Nami is the Straw Hat Pirates' navigator, who dreams of drawing a map of the entire world. </p>
+        </div>
+
+        <div class="col2" id="shira">
+            <img src="imahe/shirahoshi.png" width="100%">
+            <span>Shirahoshi</span>
+            <p class="desc1">Princess Shirahoshi, also known as Mermaid Princess. She is a giant smelt-whiting mermaid and the princess of the Ryugu Kingdom.</p>
+        </div>
+
+        <div class="col2" id="uta">
+            <img src="imahe/uta.webp" width="100%">
+            <span>Uta</span>
+            <p class="desc1">Uta is a world-famous singer or diva and the adopted daughter of Red-Haired Shanks. She was also a musician in his crew.</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col1" id="robin">
+            <img src="imahe/robin.jpg" width="100%">
+            <span>Nico Robin</span>
+            <p class="desc2">
+                Nico Robin, also known by her epithet "Devil Child" is the archaeologist of the Straw Hat Pirates and one of the Senior Officers of the Straw Hat Grand Fleet.</p>
+        </div>
+
+        <div class="col1" id="ulti">
+            <img src="imahe/ulti.jpg" width="100%">
+            <span>Ulti</span>
+            <p class="desc2">
+                Ulti is one of the Tobiroppo, the six strongest Shinuchi of the Beasts Pirates. She is the elder sister of fellow Tobiroppo Page One.</p>
+        </div>
+
+        <div class="col1" id="stussy">
+            <img src="imahe/stussy.png" width="100%">
+            <span>Stussy</span>
+            <p class="desc2">
+                Stussy is MADS' first-ever successful clone, having been modeled after Miss Buckingham Stussy. She is a spy in the employ of Dr. Vegapunk.</p>
+        </div>
+
+        <div class="col1" id="hiyori">
+            <img src="imahe/hiyori.png" width="100%">
+            <span>Hiyori</span>
+            <p class="desc2">
+                Hiyori is a beautiful and slim woman who has a strong resemblance of her mother, Kozuki Toki. </p>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
