@@ -1,0 +1,14 @@
+{
+  "name": "2-3-1-http",
+  "version": "1.0.0",
+  "description": "for practice",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "Ren Joseph",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
