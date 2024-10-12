@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title><%= title%></title>
+    <title>
+        <%= title%>
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -83,7 +85,7 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
-                    <% if(action == 'list') { %>
+                    <% if(action=='list' ) { %>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -101,26 +103,71 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <% if (sampledata.length > 0) {
+                                        <% if (sampledata.length> 0) {
                                             sampledata.forEach((mydata) => { %>
-                                                <tr>
-                                                    <td><%=mydata.idNumber %></td>
-                                                    <td><%=mydata.fullName%></td>
-                                                    <td><%=mydata.email%></td>
-                                                    <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                    <td><a href="" class="btn btn-primary">Update</a></td>
-                                                </tr>
-                                                
-                                            <% }); 
-                                        } %>
+                                            <tr>
+                                                <td>
+                                                    <%=mydata.idNumber %>
+                                                </td>
+                                                <td>
+                                                    <%=mydata.fullName%>
+                                                </td>
+                                                <td>
+                                                    <%=mydata.email%>
+                                                </td>
+                                                <td><a href="/delete/<%= mydata.id %>"
+                                                        onclick="return confirm('Do you want to remove <%= mydata.fullName%>?')"
+                                                        class="btn btn-danger">Delete</a></td>
+                                                <td><a href="" data-bs-toggle="modal"
+                                                        data-bs-target="#update<%=mydata.id %>"
+                                                        class="btn btn-primary">Update</a></td>
+                                            </tr>
+
+                                            <!-- Modal Delete Student -->
+                                            <div class="modal fade" id="update<%=mydata.id %>" tabindex="-1"   
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Update Student</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="/updatestudent/<%= mydata.id %>" method="post">
+                                                                <div class="input-group flex-nowrap">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">ID Number</span>
+                                                                    <input type="text" class="form-control" name="idnum" value="<%= mydata.id %>" required>
+                                                                </div>
+                                                                <div class="input-group flex-nowrap mt-3">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">Full Name</span>
+                                                                    <input type="text" class="form-control"
+                                                                        name="fullname" value="<%= mydata.fullName %>" required>
+                                                                </div>
+                                                                <div class="input-group flex-nowrap mt-3">
+                                                                    <span class="input-group-text" id="addon-wrapping">Email</span>
+                                                                    <input type="email" class="form-control" name="email" value="<%= mydata.email %>" required>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <input type="submit" class="btn btn-primary" value="Save">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <% }); } %>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    <% } else { } %> 
+                        <% } else { } %>
                 </div>
             </main>
 
+            <!-- Modal Add Student -->
             <div class="modal fade" id="student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -132,17 +179,19 @@
                             <form action="/addstudent" method="post">
                                 <div class="input-group flex-nowrap">
                                     <span class="input-group-text" id="addon-wrapping">ID Number</span>
-                                    <input type="text" class="form-control" name="idnum" placeholder="ID Number" required>
+                                    <input type="text" class="form-control" name="idnum" placeholder="ID Number"
+                                        required>
                                 </div>
                                 <div class="input-group flex-nowrap mt-3">
                                     <span class="input-group-text" id="addon-wrapping">Full Name</span>
-                                    <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
+                                    <input type="text" class="form-control" name="fullname" placeholder="Full Name"
+                                        required>
                                 </div>
                                 <div class="input-group flex-nowrap mt-3">
                                     <span class="input-group-text" id="addon-wrapping">Email</span>
                                     <input type="email" class="form-control" name="email" placeholder="Email" required>
                                 </div>
-                                
+
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" value="Add Student">
                                 </div>
