@@ -107,13 +107,13 @@
                                             sampledata.forEach((mydata) => { %>
                                             <tr>
                                                 <td>
-                                                    <%=mydata.idNumber %>
+                                                    <%= mydata.idNumber %>
                                                 </td>
                                                 <td>
-                                                    <%=mydata.fullName%>
+                                                    <%= mydata.fullName %>
                                                 </td>
                                                 <td>
-                                                    <%=mydata.email%>
+                                                    <%= mydata.email %>
                                                 </td>
                                                 <td><a href="/delete/<%= mydata.id %>"
                                                         onclick="return confirm('Do you want to remove <%= mydata.fullName%>?')"

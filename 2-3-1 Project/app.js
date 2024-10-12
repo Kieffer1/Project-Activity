@@ -62,8 +62,8 @@ app.get('/delete/:id', (req, res) => {
 app.post('/updatestudent/:id', (req, res) => {
     const up_id = req.params.id;
 
-    const idNumber = req.body.idNumber;
-    const fullName = req.body.fullName;
+    const idNumber = req.body.idnum;
+    const fullName = req.body.fullname;
     const email = req.body.email;
 
     const update = `UPDATE students SET idNumber = "${idNumber}", fullName = "${fullName}", email = "${email}" WHERE id = "${up_id}"`;
